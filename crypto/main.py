@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     # simulate the balance of coins in each exchange so that arbitrage opportunities in such asset allocation can be tested
     simulated_bal = {
-        'kucoin': {'BTC': 10, 'ETH': 200, 'NEO': 1000, 'XRP': 30000, 'XLM': 80000},
+        #'kucoin': {'BTC': 10, 'ETH': 200, 'NEO': 1000, 'XRP': 30000, 'XLM': 80000},
         'binance': {'BTC': 10, 'ETH': 200, 'NEO': 1000, 'XRP': 30000, 'XLM': 80000},
         'bittrex': {'BTC': 10, 'ETH': 200, 'NEO': 1000, 'XRP': 30000, 'XLM': 80000},
     }
@@ -30,11 +30,11 @@ if __name__ == '__main__':
     trade_executor = TradeExecutor(path_optimizer)
 
     # loop over the process of find opportunity, optimize amount and do trading for 10 times.
-    for i in range(10):
+    for i in range(100):
 
         # move all the kucoin money to trade wallet, kucoin is special for having two wallets main and trade wallet, details can be checked on kucoin.com
-        if i % 1500 == 0:
-            trade_executor.kucoin_move_to_trade()
+        #if i % 1500 == 0:
+        #    trade_executor.kucoin_move_to_trade()
         
         # find arbitrage
         path_optimizer.find_arbitrage()

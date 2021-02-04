@@ -101,8 +101,8 @@ class TradeExecutor:
         code = coin
         amount = val['vol']
 
-        if exc_name == 'kucoin':
-            self.kucoin_transfer_to('main', exchange, amount, code)
+        #if exc_name == 'kucoin':
+        #    self.kucoin_transfer_to('main', exchange, amount, code)
 
         exchange.withdraw(
             code=code,
